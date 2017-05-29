@@ -1,0 +1,126 @@
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+body,
+html, 
+ul,
+a
+{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(../pictures/photo.png);
+    background-size: cover;
+    height: 630px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+.center {
+    margin: 0 auto;
+    width: 960px;
+}
+
+header > div {
+    line-height: 60px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header .logo {
+    font-family: Raleway-Regular;
+    font-size: 21.5pt;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+header .logo:before {
+    display: inline-block;
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-image: url(../pictures/logos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    vertical-align: top;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav a {
+    font-size: 8.75pt;
+    font-family: Montserrat-Light;
+    margin-right: 20px;
+}
+
+nav a:first-of-type {
+    margin-left: 100px;
+}
+
+nav a:last-of-type,
+header .actions:last-of-type {
+    margin-right: 0;
+}
+
+header .actions {
+    float: right;
+    margin-top: 22px;
+    box-sizing: border-box;
+}
+
+header .curt {
+    background-image: url("../pictures/icon-cart.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    float: right;
+    width: 12px;
+    height: 16px;
+}
+
+header .search {
+    background-image: url("../pictures/icon-search.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+}
+
+.content {
+    height: 235px;
+}
+
+.content > div {
+    width: 25%;
+    display: inline-block;
+    font-size: 0;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.content span {
+    font-size: 20px;
+}
+
+.content > div:last-child {
+    padding-right: 0;
+}
