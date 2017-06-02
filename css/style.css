@@ -28,7 +28,7 @@ a
 }
 
 header {
-    background-image: url(../pictures/photo.png);
+    background-image: url(../pictures/head/photo.png);
     background-size: cover;
     height: 630px;
     padding-top: 25px;
@@ -62,7 +62,7 @@ header .logo:before {
     content: "";
     height: 40px;
     width: 40px;
-    background-image: url(../pictures/logos.png);
+    background-image: url(../pictures/head/logos.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -96,7 +96,7 @@ header .actions {
 }
 
 header .curt {
-    background-image: url("../pictures/icon-cart.png");
+    background-image: url("../pictures/head/icon-cart.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -106,7 +106,7 @@ header .curt {
 }
 
 header .search {
-    background-image: url("../pictures/icon-search.png");
+    background-image: url("../pictures/head/icon-search.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -116,7 +116,7 @@ header .search {
     margin-right: 20px;
 }
 
-.content {
+.content .service {
     height: 280px;
     font-size: 0;
     box-sizing: border-box;
@@ -126,7 +126,7 @@ header .search {
     left: 0;
 }
 
-.content > div {
+.content .service > div {
     position: relative;
     top: 0;
     left: 0;
@@ -140,7 +140,7 @@ header .search {
     box-sizing: border-box;
 }
 
-.content > div:before {
+.content .service > div:before {
     position: absolute;
     top: 0;
     left: 50%;
@@ -150,7 +150,7 @@ header .search {
     transform: translate(-50%, 0);
 }
 
-.content .line {
+.content .service .line {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -158,33 +158,152 @@ header .search {
     height: 3px;
     width: 100px;
     transform: translate(-50%, 0);
-    background-color: coral;
+    background-color: rgb(199,178,153);
+    display: none;
 }
 
-.content .web:before {
-    background-color: green;
+.content .service .web::before {
+    background-image: url("../pictures/content/service/web/icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    
 }
 
-.content .dev:before {
-    background-color: dimgrey;
+.content .service .web:hover::before {
+    background-image: url("../pictures/content/service/web/icon_hover.png");
+    width: 30px;
+    height: 30px;
 }
 
-.content .custom:before {
-    background-color: purple;
+.content .service .dev::before {
+    background-image: url("../pictures/content/service/dev/icon.png");
+    width: 30px;
+    height: 30px;
 }
 
-.content .market:before {
-    background-color: coral;
+.content .service .dev:hover::before {
+    background-image: url("../pictures/content/service/dev/icon_hover.png");
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.content .head-text {
+.content .service .custom::before {
+    background-image: url("../pictures/content/service/custom/icon.png");
+    width: 30px;
+    height: 30px;
+}
+
+.content .service .custom:hover::before {
+    background-image: url("../pictures/content/service/custom/icon_hover.png");
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content .service .market::before {
+    background-image: url("../pictures/content/service/market/icon.png");
+    width: 30px;
+    height: 30px;
+}
+
+.content .service .market:hover::before {
+    background-image: url("../pictures/content/service/market/icon_hover.png");
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content .service .head-text {
     font-family: Raleway-SemiBold;
     font-size: 16px;
     color: #555555;
 }
 
-.content .descr {
+.content .service div:hover .head-text {
+    color: rgb(199,178,153);
+}
+
+.content .service div:hover .line {
+    display: block;
+}
+
+.content .service .descr {
     font-family: Montserrat-Light;
     font-size: 12px;
     color: #8c8c8c;
 }
+
+.content .service span:hover {
+    cursor: default;
+}
+
+.content .real-ideas {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 550px;
+    width: 100%;
+    background-color: #fbfaf8;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.content .real-ideas .text-box {
+    width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.content .real-ideas .head-text {
+    font-family: Raleway-SemiBold;
+    font-size: 24px;
+    color: #555555;
+    line-height: 60px;
+}
+
+.content .real-ideas .descr {
+    font-family: Montserrat-Light;
+    font-size: 16px;
+    color: #8c8c8c;
+    line-height: 24px;
+}
+
+.content .real-ideas .photo-site {
+    position: absolute;
+    width: 480px;
+    height: 300px;
+    left: 50%;
+/*    top: 0;*/
+    transform: translate(-50%, 0);
+    background-image: url(../pictures/content/real-ideas/photo_site_center.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.content .real-ideas .photo-site::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 480px;
+    height: 300px;
+    left: -40%;
+    top: 15%;
+    background-image: url(../pictures/content/real-ideas/photo_site_left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+
+
