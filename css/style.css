@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: Raleway-Medium;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+
+@font-face {
     font-family: Montserrat-Light;
     src: url(../fonts/Montserrat-Light.ttf);
 }
@@ -248,7 +253,7 @@ header .search {
     position: relative;
     top: 0;
     left: 0;
-    height: 550px;
+    height: 510px;
     width: 100%;
     background-color: #fbfaf8;
     box-sizing: border-box;
@@ -279,31 +284,327 @@ header .search {
 
 .content .real-ideas .photo-site {
     position: absolute;
-    width: 480px;
-    height: 300px;
-    left: 50%;
-/*    top: 0;*/
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.content .real-ideas .photo-site.center {
     transform: translate(-50%, 0);
     background-image: url(../pictures/content/real-ideas/photo_site_center.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    z-index: 2;
+    width: 482px;
+    height: 302px;
+    left: 50%;
 }
 
-.content .real-ideas .photo-site::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 480px;
-    height: 300px;
-    left: -40%;
-    top: 15%;
+
+.content .real-ideas .photo-site.left,
+.content .real-ideas .photo-site.right
+{
+    z-index: 1;
+    width: 482px;
+    height: 251px;
+}
+
+.content .real-ideas .photo-site.left {
+    left: 13%;
     background-image: url(../pictures/content/real-ideas/photo_site_left.png);
-    background-repeat: no-repeat;
+}
+
+.content .real-ideas .photo-site.right {
+    right: 13%;
+    background-image: url(../pictures/content/real-ideas/photo_site_right.png);
+}
+
+.purchase {
+    background: linear-gradient(to right, #211b19, #4e3427);
+    height: 70px;
+    width: 100%;
+    color: white;
+}
+
+.purchase .text-box,
+.purchase .btn-purchase-center {
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.purchase button {
+    float: right;
+    width: 120px;
+    height: 30px;
+    background-color: #998675;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.purchase button:focus {
+    outline: 0;
+}
+
+.purchase .logo,
+.purchase .head-text {
+    font-family: Raleway-Regular;
+    font-size: 17px;
+}
+
+.purchase .logo {
+    color: #c7b299;
+}
+
+.purchase .head-text {
+    color: #ffffff;
+}
+
+.purchase .descr {
+    color: #615855;
+    font-family: Montserrat-Light;
+    font-size: 12px;
+}
+
+.latest-projects .text-box,
+.latest-projects .buttons
+{
+    width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.latest-projects > .text-box {
+    padding-top: 50px;
+}
+
+.latest-projects > .text-box .head-text {
+    font-family: Raleway-SemiBold;
+    font-size: 18px;
+    line-height: 35px;
+    color: #555555;
+}
+
+.latest-projects > .text-box .descr {
+    font-family: Montserrat-Light;
+    font-size: 10px;
+    color: #8c8c8c;
+}
+
+.latest-projects .buttons {
+    padding-top: 20px;
+}
+
+.latest-projects .buttons button {
+    cursor: pointer;
+    min-width: 50px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid #f0f0f0;
+    font-family: Montserrat-Light;
+    font-size: 12px;
+    height: 25px;
+}
+
+.latest-projects button:focus {
+    outline: 0;
+}
+
+.latest-projects button.active {
+    background-color: #998675;
+    color: white;
+}
+
+.latest-projects .projects {
+    font-size: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.latest-projects .projects .project {
+    display: inline-block;
+    float: left;
+    width: 310px;
+    height: 310px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.latest-projects .projects .project:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.latest-projects .projects .project .picture {
+    width: 310px;
+    height: 240px;
     background-position: center;
-    background-size: contain;
-    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.latest-projects .projects .project .picture:nth-of-type(1) {
+    background-image: url('../pictures/content/projects/bg_photo1.png');
+}
+
+.latest-projects .projects .project:nth-of-type(2) .picture {
+    background-image: url('../pictures/content/projects/bg_photo2.png');
+}
+
+.latest-projects .projects .project:nth-of-type(3) .picture {
+    background-image: url('../pictures/content/projects/bg_photo3.png');
+}
+
+.latest-projects .projects .project:nth-of-type(4) .picture {
+    background-image: url('../pictures/content/projects/bg_photo4.png');
+}
+
+.latest-projects .projects .project:nth-of-type(5) .picture {
+    background-image: url('../pictures/content/projects/bg_photo5.png');
+}
+
+.latest-projects .projects .project:nth-of-type(6) .picture {
+    background-image: url('../pictures/content/projects/bg_photo6.png');
+}
+
+.latest-projects .projects .project .text-box {
+    width: 310px;
+    height: 70px;
+    display: table-cell;
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background-color: #fbfaf8;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.latest-projects .projects .project .text-box:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
 }
 
 
+.latest-projects .projects .project .text-box .head-text {
+    font-family: Raleway-Medium;
+    font-size: 16px;
+    color: #c7b299;
+    line-height: 30px;
+}
 
+.latest-projects .projects .project .text-box .descr {
+    font-family: Montserrat-Light;
+    font-size: 12px;
+    color: #d7d7d6;
+}
+
+.latest-projects .projects button {
+    margin-top: 10px;
+    width: 120px;
+    height: 30px;
+    background-color: #998675;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.play-video {
+    height: 500px;
+    background-image: url("../pictures/content/play_video/bg_photo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 250px rgba(0, 0, 0, 0.33) inset;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 50px;
+}
+
+.play-video .main-box {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.play-video .main-box .icon-play {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.4;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.play-video .main-box .icon-play::before { 
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.play-video .main-box .icon-play::after { 
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    border-right: 15px solid transparent;
+    border-left: 15px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.play-video .text-box .head-text {
+    font-family: Raleway-Medium;
+    font-size: 19px;
+    color: white;
+    line-height: 50px;
+}
+
+.play-video .text-box .descr {
+    font-family: Montserrat-Light;
+    font-size: 12px;
+    color: white;
+}
+
+.mob-device {
+    height: 386px;
+}
+
+.mob-device .phone {
+    height: 386px;
+    width: 265px;
+    background-image: url("../pictures/content/mob_device/phone_in_hand.png");
+    margin-left: 300px;
+    float: left;
+}
+
+.mob-device .text-box {
+    height: 386px;
+    width: 500px;
+    background-color: aqua;
+}
