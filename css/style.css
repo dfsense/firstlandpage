@@ -75,18 +75,18 @@ header .logo:before {
     vertical-align: top;
 }
 
-nav {
+header nav {
     display: inline-block;
     vertical-align: top;
 }
 
-nav a {
+header nav a {
     font-size: 8.75pt;
     font-family: Montserrat-Light;
     margin-right: 20px;
 }
 
-nav a:first-of-type {
+header nav a:first-of-type {
     margin-left: 100px;
 }
 
@@ -735,23 +735,27 @@ header .search {
     
 }
 
-.recent-posts .inner-box {
-    width: 960px;
-    height: 600px;
+.recent-posts .text-box {
+    width: 540px;
     margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.recent-posts .text-box-inner {
+    padding-top: 30px;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-}
-
-.recent-posts .inner-box > .head-text {
+} 
+    
+.recent-posts .text-box .head-text {
     font-family: Raleway-Semibold;
     font-size: 20px;
     line-height: 50px;
     color: #555555;
 }
 
-.recent-posts .inner-box > .descr {
+.recent-posts .text-box .descr {
     font-family: Montserrat-Light;
     font-size: 12px;
     color: #9d9d9d;
@@ -761,16 +765,84 @@ header .search {
     font-size: 0;
 } 
 
-.recent-posts .post {
+.recent-posts .posts .post {
     display: inline-block;
     float: left;
     width: 310px;
-    height: 310px;
     margin-right: 15px;
-    margin-bottom: 15px;
 }
+
+.recent-posts .posts .post:nth-of-type(3) {
+    margin-right: 0;
+}
+
+
+.recent-posts .posts .post .picture {
+    width: 310px;
+    height: 240px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recent-posts .posts .post .text-box {
+    width: 270px;
+    margin: 20px;
+}
+
+.recent-posts .posts .post .text-box a {
+    line-height: 50px;
+    font-family: Montserrat-Light;
+    font-size: 12px;
+    color: #cebca7;
+    text-decoration: none;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.recent-posts .posts .post .text-box a::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left-color: #cebca7;
+    position: absolute;
+    top: 4px;
+    right: -15px;
+}
+
+
+.recent-posts .posts .nav {
+    width: 100px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.recent-posts .posts .nav .gt {
+    margin: 0 10px;
+    color: #cebca7;
+        
+}
+
+.recent-posts .posts .nav .gt::before {
+    background-color: white;
+    border: 1px solid #cebca7;
+    top: -2px;
+    left: -7px;
+}
+
 
 .recent-posts .posts .post:nth-of-type(1) .picture {
     background-image: url(../pictures/content/recent-posts/photo_post_1.png);
+}
+
+.recent-posts .posts .post:nth-of-type(2) .picture {
+    background-image: url(../pictures/content/recent-posts/photo_post_2.png);
+}
+
+.recent-posts .posts .post:nth-of-type(3) .picture {
+    background-image: url(../pictures/content/recent-posts/photo_post_3.png);
 }
 
